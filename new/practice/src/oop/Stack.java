@@ -2,14 +2,14 @@ package oop;
 
 public class Stack {
 
-	int s[]=new int[10];
-	int tos;
+	 int s[]=new int[10];
+	 int tos;
 	Stack() {
 		tos=-1;
 	}
 	void push(int item)
 	{
-		if(tos!=9) {
+		if(tos!=s.length) {
 		s[++tos]=item;
 		}
 		else
