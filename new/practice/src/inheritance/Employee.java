@@ -1,16 +1,16 @@
 package inheritance;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
 	String name;
 	double salary;
 	Employee(String n,double s){
 		name=n;
 		salary=s;
 	}
-	Employee(){
-		name="";
-		salary=0.0;
-	}
+//	Employee(){
+//		name="";
+//		salary=0.0;
+//	}
 	String getName()
 	{
 		return name;
@@ -34,5 +34,11 @@ public class Employee {
 		
 		
 	}
-
+	@Override
+	public int compareTo(Employee e) {
+		if(this.salary==e.salary)
+			return 0;
+		if(this.salary<e.salary)
+			return -1;
+		return 1;
 }
